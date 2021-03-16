@@ -26,6 +26,8 @@ SELECT empno, empno + 10, 10, hiredate, hiredate + 10 FROM emp; -- 날짜인 hir
 
 SELECT empno empno2, empno + 10 emp_plus, 10 hiredate, hiredate + 10 FROM emp; -- empno컬럼 이름을 empno2 로 바꾸어줌.
 
+-------------------------------------------------------------------------------- ALIAS
+
 ALIAS : 컬럼의 이름을 변경
         컬럼 | EXPRESSION [as] [별칭명]
 SELECT empno, empno + 10 AS empno_plus FROM emp; -- empno컬럼에 10을 더해주고 별칭을 empno_plus로 바꾸어주어서 같이 출력 (AS는 사용해도, 안해도됨)
@@ -127,7 +129,7 @@ WHERE 1=1; --- 1=1은 참이기때문에 모든행 출력, 1=2하면 아무것�
 
 SELECT empno, ename, hiredate
 FROM emp
-WHERE hiredate >= '81/03/01';
+WHERE HIREDATE >= TODATE('81/03/01', 'YYYY/MM/DD');
 
 문자열을 날짜타입으로 변환하는 방법
 TO_DATE(날짜 문자열, 날짜 문자열의 포맷팅)
