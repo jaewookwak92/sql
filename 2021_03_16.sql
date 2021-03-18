@@ -246,3 +246,4 @@ FROM emp;
 --예를 들어 3학년 고득점자 10명을 뽑는 쿼리문을 원한다면
 --SELECT * FROM student WHERE grade=3 AND rownum<=10 ORDER BY score DESC 의 경우에는 원하는 결과를 얻을 수 없고
 --SELECT * FROM (SELECT * FROM student WHERE grade=3 ORDER BY score DESC) WHERE rownum<=10 의 쿼리를 실행해야 합니다. 필요한거 다 정리한다음 그다음 rownum을 정리
+
