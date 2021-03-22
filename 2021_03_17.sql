@@ -67,7 +67,7 @@ WHERE LOWER(ename) = 'smith'; -- 소문자로 이름 바꾸기 LOWER같은경우
 
 SELECT *
 FROM emp
-WHERE ename = UPPER('smith'); -- 얘는 
+WHERE ename = UPPER('smith'); -- 얘는 대문자
 
 
 SELECT * 
