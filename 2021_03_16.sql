@@ -65,7 +65,7 @@ SQL에서 정렬 : ORDER BY ==> SELECT -> FROM -> WHERE -> ORDER BY
 
 SELECT *
 FROM emp
-ORDER BY ename; --이름이 A부터 순차적으로 시작됨
+ORDER BY ename; --이름이 A부터 순차적으로 시작됨 (오름차순은 ASC 생략가능)
 
 A -> B -> C -> D ..:오름차순(ASC => DEFAULT -- 뒤에 ASC나 DESC를 붙이지 않고 ORDER BY를 사용하면 디폴트로 쟤가 설정됨)
 100 ->99 ...->1    :내림차순(DESC => 써줘야 설정됨
@@ -87,6 +87,9 @@ ORDER BY m;
 
 문제 15. 데이터 졍렬 ORDER BY
 dept 테이블의 모든 정보를 부서이름으로 오름차순 정렬로 조회되도록 쿼리를 작성하세요
+SELECT *
+FROM dept
+ORDER BY DEPTNO;
 
 dept 테이블의 모든 정보를 부서위치로 내림차순 정렬로 조회되도록 쿼리를 작성하세요.
 
@@ -127,8 +130,19 @@ emp 테이블에서 10번 부서(deptno) 혹은 30번 부서에 속하는 사람
 
 SELECT *
 FROM emp
+WHERE DEPTNO IN (30, 10)
+AND sal > 1500
+ORDER BY ENAME DESC;
+
+
+
+
+SELECT *
+FROM emp
 WHERE DEPTNO = '10' OR DEPTNO = '30' AND SAL > 1500
 ORDER BY ENAME DESC;
+
+
 
 SELECT * 
 FROM emp

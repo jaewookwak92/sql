@@ -8,7 +8,6 @@ AND sal > 500
 
 order by 컬럼명 ASC OR DESC;
 
-
 가상컬럼 ROWNUM
 
 시험 문제 트래잭션, NOT IN 
@@ -132,6 +131,7 @@ FROM emp;
 <답>
 SELECT empno, ename, sal, TRUNC(sal/1000), MOD(SAL, 1000)  --TRUNC는 몫, MOD는 나머지를 구하는 함수
 FROM emp;
+
 
 -------------------------------------- 시간함수 ------------------------------------------------
 

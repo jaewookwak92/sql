@@ -65,7 +65,8 @@ float f = 10f; -- 10을 정수가 아닌 실수로 표현하고싶을때 float �
 long l = 10L;
 String s = "Hello World";
 
-SELECT empno, 10, 'Hello World' FROM emp; --SQL에서는 문자열을 JAVA와 달리 ''로 써준다.
+SELECT empno, 10, 'Hello World' 
+FROM emp; --SQL에서는 문자열을 JAVA와 달리 ''로 써준다.
 
 
 문자열 연산
